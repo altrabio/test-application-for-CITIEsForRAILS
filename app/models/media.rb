@@ -98,6 +98,153 @@ class Media < ActiveRecord::Base
     a35.save
     a36.save
 
+    c1=Comment.new :description=>"my first comment about media with id 1", :media_id=>1
+    c2=Comment.new :description=>"my first comment about media with id 2", :media_id=>2
+    c3=Comment.new :description=>"my first comment about media with id 3", :media_id=>3
+    c4=Comment.new :description=>"my first comment about media with id 4", :media_id=>4
+    c5=Comment.new :description=>"my first comment about media with id 5", :media_id=>5
+    c6=Comment.new :description=>"my first comment about media with id 6", :media_id=>6
+    c7=Comment.new :description=>"my first comment about media with id 7", :media_id=>7
+    c8=Comment.new :description=>"my first comment about media with id 8", :media_id=>8
+    c9=Comment.new :description=>"my first comment about media with id 9", :media_id=>9
+    c10=Comment.new :description=>"my first comment about media with id 10", :media_id=>10
+    c11=Comment.new :description=>"my first comment about media with id 11", :media_id=>11
+    c12=Comment.new :description=>"my first comment about media with id 12", :media_id=>12
+    c13=Comment.new :description=>"my first comment about media with id 13", :media_id=>13
+    c14=Comment.new :description=>"my first comment about media with id 14", :media_id=>14
+    c15=Comment.new :description=>"my first comment about media with id 15", :media_id=>15
+    c16=Comment.new :description=>"my first comment about media with id 16", :media_id=>16
+    c17=Comment.new :description=>"my first comment about media with id 17", :media_id=>17
+    c18=Comment.new :description=>"my first comment about media with id 18", :media_id=>18
+    c19=Comment.new :description=>"my first comment about media with id 19", :media_id=>19
+    c20=Comment.new :description=>"my first comment about media with id 20", :media_id=>20
+    c21=Comment.new :description=>"my first comment about media with id 21", :media_id=>21
+    c22=Comment.new :description=>"my first comment about media with id 22", :media_id=>22
+    c23=Comment.new :description=>"my first comment about media with id 23", :media_id=>23
+    c24=Comment.new :description=>"my first comment about media with id 24", :media_id=>24
+    c25=Comment.new :description=>"my first comment about media with id 25", :media_id=>25
+    c26=Comment.new :description=>"my first comment about media with id 26", :media_id=>26
+    c27=Comment.new :description=>"my first comment about media with id 27", :media_id=>27
+    c28=Comment.new :description=>"my first comment about media with id 28", :media_id=>28
+    c29=Comment.new :description=>"my first comment about media with id 29", :media_id=>29
+    c30=Comment.new :description=>"my first comment about media with id 30", :media_id=>30
+    c31=Comment.new :description=>"my first comment about media with id 31", :media_id=>31
+    c32=Comment.new :description=>"my first comment about media with id 32", :media_id=>32
+    c33=Comment.new :description=>"my first comment about media with id 33", :media_id=>33
+    c34=Comment.new :description=>"my first comment about media with id 34", :media_id=>34
+    c35=Comment.new :description=>"my first comment about media with id 35", :media_id=>35
+    c36=Comment.new :description=>"my first comment about media with id 36", :media_id=>36
+    c37=Comment.new :description=>"my second comment about media with id 1", :media_id=>1
+    c38=Comment.new :description=>"my second comment about media with id 2", :media_id=>2
+    c39=Comment.new :description=>"my second comment about media with id 3", :media_id=>3
+    c40=Comment.new :description=>"my second comment about media with id 4", :media_id=>4
+    c41=Comment.new :description=>"my second comment about media with id 5", :media_id=>5
+    c42=Comment.new :description=>"my second comment about media with id 6", :media_id=>6
+    c43=Comment.new :description=>"my second comment about media with id 7", :media_id=>7
+    c44=Comment.new :description=>"my second comment about media with id 8", :media_id=>8
+    c45=Comment.new :description=>"my second comment about media with id 9", :media_id=>9
+    c46=Comment.new :description=>"my second comment about media with id 10", :media_id=>10
+    c47=Comment.new :description=>"my second comment about media with id 11", :media_id=>11
+    c48=Comment.new :description=>"my second comment about media with id 12", :media_id=>12
+    c49=Comment.new :description=>"my second comment about media with id 13", :media_id=>13
+    c50=Comment.new :description=>"my second comment about media with id 14", :media_id=>14
+    c51=Comment.new :description=>"my second comment about media with id 15", :media_id=>15
+    c52=Comment.new :description=>"my second comment about media with id 16", :media_id=>16
+    c53=Comment.new :description=>"my second comment about media with id 17", :media_id=>17
+    c54=Comment.new :description=>"my second comment about media with id 18", :media_id=>18
+    c55=Comment.new :description=>"my second comment about media with id 19", :media_id=>19
+    c56=Comment.new :description=>"my second comment about media with id 20", :media_id=>20
+    c57=Comment.new :description=>"my second comment about media with id 21", :media_id=>21
+    c58=Comment.new :description=>"my second comment about media with id 22", :media_id=>22
+    c59=Comment.new :description=>"my second comment about media with id 23", :media_id=>23
+    c60=Comment.new :description=>"my second comment about media with id 24", :media_id=>24
+    c61=Comment.new :description=>"my second comment about media with id 25", :media_id=>25
+    c62=Comment.new :description=>"my second comment about media with id 26", :media_id=>26
+    c63=Comment.new :description=>"my second comment about media with id 27", :media_id=>27
+    c64=Comment.new :description=>"my second comment about media with id 28", :media_id=>28
+    c65=Comment.new :description=>"my second comment about media with id 29", :media_id=>29
+    c66=Comment.new :description=>"my second comment about media with id 30", :media_id=>30
+    c67=Comment.new :description=>"my second comment about media with id 31", :media_id=>31
+    c68=Comment.new :description=>"my second comment about media with id 32", :media_id=>32
+    c69=Comment.new :description=>"my second comment about media with id 33", :media_id=>33
+    c70=Comment.new :description=>"my second comment about media with id 34", :media_id=>34
+    c71=Comment.new :description=>"my second comment about media with id 35", :media_id=>35
+    c72=Comment.new :description=>"my second comment about media with id 36", :media_id=>36
+
+
+    c1.save
+    c2.save
+    c3.save
+    c4.save
+    c5.save
+    c6.save
+    c7.save
+    c8.save
+    c9.save
+    c10.save
+    c11.save
+    c12.save
+    c13.save
+    c14.save
+    c15.save
+    c16.save
+    c17.save
+    c18.save
+    c19.save
+    c20.save
+    c21.save
+    c22.save
+    c23.save
+    c24.save
+    c25.save
+    c26.save
+    c27.save
+    c28.save
+    c29.save
+    c30.save
+    c31.save
+    c32.save
+    c33.save
+    c34.save
+    c35.save
+    c36.save
+    c37.save
+    c38.save
+    c39.save
+    c40.save
+    c41.save
+    c42.save
+    c43.save
+    c44.save
+    c45.save
+    c46.save
+    c47.save
+    c48.save
+    c49.save
+    c50.save
+    c51.save
+    c52.save
+    c53.save
+    c54.save
+    c55.save
+    c56.save
+    c57.save
+    c58.save
+    c59.save
+    c60.save
+    c61.save
+    c62.save
+    c63.save
+    c64.save
+    c65.save
+    c66.save
+    c67.save
+    c68.save
+    c69.save
+    c70.save
+    c71.save
+    c72.save
+
 
    end
 end
