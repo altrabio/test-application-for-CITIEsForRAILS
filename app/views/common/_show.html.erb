@@ -1,0 +1,23 @@
+<table BORDER="1">
+
+<%l=@item%>
+  <tr>
+	<td> class= <%=l.class.name%> </td>
+	<td> price category= <%=l.pricecategory%> </td>	
+	<% l.attributes.each do |key,value| %> 
+	<td> <%= "#{key}=#{value}" %> </td>
+	<%end%>
+
+
+	<% @TabAssoc.each do |t| %>
+	<% qq=t.where("media_id=?",l.id)%>	
+	<% qq.each do |q|%>
+	<td> CommentId=<%= q.id%> ; Comment : "<%= q.description%>" </td>
+	<%end%>
+	<%end%>	
+	
+	<td><%= link_to 'Edit', "/#{l.class.name.tableize}/#{l.id}/edit" %></td>
+    <td><%= link_to 'Back', "/#{l.class.name.tableize}/" %></td>
+  </tr>
+
+</table>

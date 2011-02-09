@@ -1,0 +1,8 @@
+rails generate scaffold Media name:string price:integer 
+rails generate scaffold Unknown
+rails generate scaffold Audio title:string genre:string
+rails generate scaffold Video title:string genre:string
+rails generate scaffold Book title:string author:string
+rails generate scaffold MP3
+rails generate scaffold Dictionary lf:string lt:string
+rails generate scaffold PocketDictionary

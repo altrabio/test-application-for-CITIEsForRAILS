@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestaltrabioCVI1</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<%= yield %>
+<br/>
+<br/>
+<br/>
+<br/>
+
+	<a href="/medias/populate">Populate the DataBase</a><br/>
+	<%= link_to 'Comments List', comments_path %>
+<br/><br/><br/>
+<table>
+
+  <tr>
+	<td> <%= link_to 'Medias List', medias_path %> </td>
+	<td> <%= link_to 'Medias Destroy All', delete_all_medias_path %></td>   
+  </tr>
+
+  <tr>
+	<td> <%= link_to 'Unknowns List', unknowns_path %> </td>
+	<td> <%= link_to 'Unknowns Destroy All', delete_all_unknowns_path %></td>   
+  </tr>
+
+  <tr>
+	<td> <%= link_to 'Audios List', audios_path %> </td>
+	<td> <%= link_to 'Audios Destroy All', delete_all_audios_path %></td>   
+  </tr>
+
+  <tr>
+	<td> <%= link_to 'Mp3s List', mp3s_path %> </td>
+	<td> <%= link_to 'Mp3s Destroy All', delete_all_mp3s_path %></td>   
+  </tr>
+
+  <tr>
+	<td> <%= link_to 'Videos List', videos_path %> </td>
+	<td> <%= link_to 'Videos Destroy All', delete_all_videos_path %></td>   
+  </tr>
+
+  <tr>
+	<td> <%= link_to 'Books List', books_path %> </td>
+	<td> <%= link_to 'Books Destroy All', delete_all_books_path %></td>   
+  </tr>
+
+
+  <tr>
+	<td> <%= link_to 'Dictionaries List', dictionaries_path %> </td>
+	<td> <%= link_to 'Dictionaries Destroy All', delete_all_dictionaries_path %></td>   
+  </tr>
+
+
+
+  <tr>
+	<td> <%= link_to 'Pocket Dictionaries List', pocket_dictionaries_path %> </td>
+	<td> <%= link_to 'Pocket Dictionaries Destroy All', delete_all_pocket_dictionaries_path %></td>   
+  </tr>
+
+
+
+  <tr>
+	<td> <%= link_to 'Novels List', novels_path %> </td>
+	<td> <%= link_to 'Novels Destroy All', delete_all_novels_path %></td>   
+  </tr>
+
+</table>
+
+
+     <%= debug(params) if Rails.env.development? %>
+
+
+</body>
+</html>

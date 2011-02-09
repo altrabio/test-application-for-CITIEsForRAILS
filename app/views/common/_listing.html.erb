@@ -1,0 +1,23 @@
+
+
+<table BORDER="1">
+
+
+<% @list.each do |l| %>
+  <tr>
+	<td> class= <%=l.class.name%> </td>
+	<td> price category= <%=l.pricecategory%> </td>
+	
+	<% l.attributes.each do |key,value| %> 
+	<td> <%= "#{key}=#{value}" %> </td>
+	<%end%>
+	
+		
+	
+
+    <td><%= link_to 'Show', l %></td>
+    <td><%= link_to 'Edit', "/#{l.class.name.tableize}/#{l.id}/edit" %></td>
+    <td><%= link_to 'Destroy', l, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

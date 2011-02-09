@@ -1,0 +1,65 @@
+<% if ((!@list.nil? )&&(@list.length>0)) %>
+
+<h1>Listing <%=@list.length%> <%= @theclass.name%>(s) </h1>
+
+<table>
+  
+	<%@mother= @theclass.mother_class %>
+
+   <% @list.each do |list| %>
+
+   <% list=@mother.find(list.id)%>
+   <tr>
+	<td> class </td>
+   <% list.attributes.each do |key,value| %> 
+	<td><%= key %> </td>
+	<%end%>
+  </tr>
+  <tr>
+	<td><%= list.class %> </td>
+	<% list.attributes.each do |key,value| %> 
+	<td><%= value %> </td>
+	<%end%>
+	
+    <td><%= link_to 'Show', list %></td>
+        <% a="#{list.class}" %>
+		<% b=a.pluralize.downcase %>
+		<% c="/#{b}/#{list.id}/edit"%>
+
+    <td><%= link_to 'Edit', c%> </td> 
+    <td><%= link_to 'Destroy', list, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+
+<% end %>
+</table>
+
+<br />
+<% a="#{@list[0].class}" %>
+<% b=a.pluralize.downcase %>
+<% c="/#{b}/new"%>
+
+<%= link_to 'New Book', c %> 
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ 	<a href="/medias/populate">Populate the DataBase</a><br/><br/><br/>
+
+<%= link_to 'Medias', medias_path %><br/>
+
+<%= link_to 'Unknowns', unknowns_path %><br/>
+
+<%= link_to 'Audios', audios_path %><br/>
+
+<%= link_to 'MP3s', mp3s_path %><br/>
+
+<%= link_to 'Videos', videos_path %><br/>
+
+<%= link_to 'Books', books_path %><br/>
+
+<%= link_to 'Dictionaries', dictionaries_path %><br/>
+
+<%= link_to 'Pocket Dictionaries', pocket_dictionaries_path %>
+<% end %>
