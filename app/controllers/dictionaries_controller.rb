@@ -31,6 +31,7 @@ class DictionariesController < ApplicationController
   # GET /dictionaries/new.xml
   def new
     @dictionary = Dictionary.new
+    @item=@dictionary
 
     respond_to do |format|
       format.html # new.html.erb

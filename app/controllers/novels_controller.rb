@@ -32,6 +32,7 @@ class NovelsController < ApplicationController
   # GET /novels/new.xml
   def new
     @novel = Novel.new
+    @item=@novel
 
     respond_to do |format|
       format.html # new.html.erb

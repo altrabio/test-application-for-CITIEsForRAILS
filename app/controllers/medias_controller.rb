@@ -43,6 +43,7 @@ class MediasController < ApplicationController
   # GET /medias/new.xml
   def new
     @media = Media.new
+    @item=@media
 
     respond_to do |format|
       format.html # new.html.erb

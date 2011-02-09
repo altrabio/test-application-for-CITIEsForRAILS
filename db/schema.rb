@@ -10,12 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110208171048) do
+ActiveRecord::Schema.define(:version => 20110209163955) do
 
   create_table "audios", :force => true do |t|
     t.string "title"
     t.string "genre"
   end
+
+  create_table "book_comments", :force => true do |t|
+    t.text     "description"
+    t.integer  "book_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "book_comments", ["book_id"], :name => "index_book_comments_on_book_id"
 
   create_table "comments", :force => true do |t|
     t.text     "description"

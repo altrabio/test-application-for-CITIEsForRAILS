@@ -31,7 +31,7 @@ class VideosController < ApplicationController
   # GET /videos/new.xml
   def new
     @video = Video.new
-
+    @item=@video
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @video }

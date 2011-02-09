@@ -1,0 +1,27 @@
+<h1>Listing book_comments</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Book Class</th>
+    <th>Id</th>
+	<th></th>
+	<th></th>
+    <th></th>
+  </tr>
+
+<% @book_comments.each do |book_comment| %>
+  <tr>
+    <td><%= book_comment.description %></td>
+	<td><%= if(false) ; Book.find(book_comment.book_id).class.name.to_s; end %></td>
+    <td><%= book_comment.book_id %></td>
+    <td><%= link_to 'Show', book_comment %></td>
+    <td><%= link_to 'Edit', edit_book_comment_path(book_comment) %></td>
+    <td><%= link_to 'Destroy', book_comment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book comment', new_book_comment_path %>

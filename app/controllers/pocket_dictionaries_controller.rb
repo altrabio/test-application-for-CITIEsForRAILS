@@ -31,6 +31,7 @@ class PocketDictionariesController < ApplicationController
   # GET /pocket_dictionaries/new.xml
   def new
     @pocket_dictionary = PocketDictionary.new
+    @item=@pocket_dictionary
 
     respond_to do |format|
       format.html # new.html.erb

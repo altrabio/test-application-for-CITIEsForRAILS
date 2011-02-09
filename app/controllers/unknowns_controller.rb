@@ -31,6 +31,7 @@ class UnknownsController < ApplicationController
   # GET /unknowns/new.xml
   def new
     @unknown = Unknown.new
+    @item= @unknown
 
     respond_to do |format|
       format.html # new.html.erb

@@ -8,12 +8,14 @@
 	<td> <%= "#{key}=#{value}" %> </td>
 	<%end%>
 
-
+	<% i=0 %>
 	<% @TabAssoc.each do |t| %>
-	<% qq=t.where("media_id=?",l.id)%>	
+	<% if(i==0) ; qq=t.where("media_id=?",l.id); end%>	
+	<% if(i==1) ; qq=t.where("book_id=?",l.id); end%>	
 	<% qq.each do |q|%>
 	<td> CommentId=<%= q.id%> ; Comment : "<%= q.description%>" </td>
 	<%end%>
+	<% i=i+1%>
 	<%end%>	
 	
 	<td><%= link_to 'Edit', "/#{l.class.name.tableize}/#{l.id}/edit" %></td>

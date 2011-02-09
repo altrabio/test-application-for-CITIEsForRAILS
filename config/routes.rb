@@ -1,4 +1,6 @@
 TestaltrabioCVI1::Application.routes.draw do
+  resources :book_comments
+
   resources :comments
 
   resources :novels do

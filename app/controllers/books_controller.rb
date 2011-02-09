@@ -34,6 +34,7 @@ class BooksController < ApplicationController
   # GET /books/new.xml
   def new
     @book = Book.new
+    @item=@book
 
     respond_to do |format|
       format.html # new.html.erb

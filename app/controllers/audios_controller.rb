@@ -32,6 +32,7 @@ class AudiosController < ApplicationController
   # GET /audios/new.xml
   def new
     @audio = Audio.new
+    @item=@audio
 
     respond_to do |format|
       format.html # new.html.erb
