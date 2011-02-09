@@ -1,7 +1,7 @@
 
 
 class Book < Media
-  before_destroy :toto
+  after_destroy :toto
   has_many :book_comments, :dependent => :destroy
   acts_as_cvi :table_name=>'tablebooks'  
   
