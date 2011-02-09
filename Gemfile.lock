@@ -28,7 +28,7 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
-    altrabioCVI (0.0.7)
+    altrabioCVI (0.0.8)
     arel (2.0.7)
     builder (2.1.2)
     erubis (2.6.6)
