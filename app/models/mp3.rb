@@ -1,6 +1,16 @@
 
 class Mp3 < Audio
-  
-#  acts_as_cvi_non_mother_class :no_self_table=>true
+ 
+  after_destroy :toto5
+  before_destroy :bef5
+
+  def toto5
+   puts("---->AFTER DESTROY CLASS mp3")
+  end
+ 
+  def bef5
+   puts("---->Before DESTROY CLASS mp3")
+  end
+
 
 end

@@ -1,15 +1,14 @@
 class CreateNovels < ActiveRecord::Migration
   def self.up
-    create_table :novels do |t|
-      
+    create_table :novels do |t|      
       t.string :summary
       
     end
-  CreateTheViewForCVI(Novel)
+  CreateTheViewForCVI(Novel) #needed for CITIEsForRails
   end
 
   def self.down
-    DropTheViewForCVI(Novel)
+    DropTheViewForCVI(Novel) #needed for CITIEsForRails
     drop_table :novels
   end
 end

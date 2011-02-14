@@ -1,18 +1,14 @@
 class CreateVideos < ActiveRecord::Migration
   def self.up
-    create_table :videos do |t|
-      
+    create_table :videos do |t|      
       t.string :title
       t.string :genre
-
-     # t.timestamps TO DELETE
-    end
-   
-    CreateTheViewForCVI(Video)
+    end   
+    CreateTheViewForCVI(Video) #needed for CITIEsForRails
   end
 
   def self.down
-    DropTheViewForCVI(Video)
+    DropTheViewForCVI(Video) #needed for CITIEsForRails
     drop_table :videos
   end
 end

@@ -1,5 +1,14 @@
 class Unknown < Media
   
-#  acts_as_cvi_non_mother_class :no_self_table=>true USELESS due to class inheritance
+  after_destroy :toto8
+  before_destroy :bef8
+ 
+  def toto8
+   puts("---->AFTER DESTROY CLASS unknown")
+  end
+  
+  def bef8
+   puts("---->Before DESTROY CLASS unknown")
+  end
   
 end

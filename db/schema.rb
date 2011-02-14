@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(:version => 20110209163955) do
 
   add_index "book_comments", ["book_id"], :name => "index_book_comments_on_book_id"
 
+  create_table "books", :force => true do |t|
+    t.string "title"
+    t.string "author"
+  end
+
   create_table "comments", :force => true do |t|
     t.text     "description"
     t.integer  "media_id"
@@ -52,11 +57,6 @@ ActiveRecord::Schema.define(:version => 20110209163955) do
     t.string "summary"
   end
 
-  create_table "tablebooks", :force => true do |t|
-    t.string "title"
-    t.string "author"
-  end
-
   create_table "videos", :force => true do |t|
     t.string "title"
     t.string "genre"
@@ -71,6 +71,17 @@ ActiveRecord::Schema.define(:version => 20110209163955) do
     t.datetime "updated_at"
     t.string   "title"
     t.string   "genre"
+  end
+
+  create_table "view_books", :id => false, :force => true do |t|
+    t.integer  "id"
+    t.string   "type"
+    t.string   "name"
+    t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "author"
   end
 
   create_table "view_dictionaries", :id => false, :force => true do |t|
@@ -96,17 +107,6 @@ ActiveRecord::Schema.define(:version => 20110209163955) do
     t.string   "title"
     t.string   "author"
     t.string   "summary"
-  end
-
-  create_table "view_tablebooks", :id => false, :force => true do |t|
-    t.integer  "id"
-    t.string   "type"
-    t.string   "name"
-    t.integer  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "title"
-    t.string   "author"
   end
 
   create_table "view_videos", :id => false, :force => true do |t|

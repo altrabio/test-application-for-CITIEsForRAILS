@@ -1,8 +1,10 @@
 
 class Media < ActiveRecord::Base
-  
-   has_many :comments, :dependent => :destroy
-  acts_as_cvi
+  after_destroy :toto4
+  before_destroy :bef4
+  has_many :comments, :dependent => :destroy
+ 
+  acts_as_cvi #needed for CITIEsForRails
   
   def pricecategory
     if(price<75)
@@ -17,87 +19,107 @@ class Media < ActiveRecord::Base
   end
   
   
+  def bef4
+    puts("---->Before DESTROY CLASS media")
+  end
+
+  def toto4
+    puts("---->AFTER DESTROY CLASS media")
+  end
+ 
   def self.testPopulate
-
-
-
-    a1=Media.new :name=>"mynameis1", :price=>136
-    a2=Media.new :name=>"mynameis2", :price=>140
-    a3=Media.new :name=>"mynameis3", :price=>91
-    a4=Media.new :name=>"mynameis4", :price=>177
-    a5=Unknown.new :name=>"mynameis5", :price=>128
-    a6=Unknown.new :name=>"mynameis6", :price=>181
-    a7=Unknown.new :name=>"mynameis7", :price=>183
-    a8=Unknown.new :name=>"mynameis8", :price=>122
-    a9=Audio.new :name=>"mynameis9", :price=>95, :title=>"mytitleis9", :genre=> "mygenreis9"
-    a10=Audio.new :name=>"mynameis10", :price=>198, :title=>"mytitleis10", :genre=> "mygenreis10"
-    a11=Audio.new :name=>"mynameis11", :price=>111, :title=>"mytitleis11", :genre=> "mygenreis11"
-    a12=Audio.new :name=>"mynameis12", :price=>184, :title=>"mytitleis12", :genre=> "mygenreis12"
-    a13=Mp3.new :name=>"mynameis13", :price=>130, :title=>"mytitleis13", :genre=> "mygenreis13"
-    a14=Mp3.new :name=>"mynameis14", :price=>36, :title=>"mytitleis14", :genre=> "mygenreis14"
-    a15=Mp3.new :name=>"mynameis15", :price=>92, :title=>"mytitleis15", :genre=> "mygenreis15"
-    a16=Mp3.new :name=>"mynameis16", :price=>29, :title=>"mytitleis16", :genre=> "mygenreis16"
-    a17=Book.new :name=>"mynameis17", :price=>96, :title=>"mytitleis17", :author=> "myauthoris17"
-    a18=Book.new :name=>"mynameis18", :price=>49, :title=>"mytitleis18", :author=> "myauthoris18"
-    a19=Book.new :name=>"mynameis19", :price=>167, :title=>"mytitleis19", :author=> "myauthoris19"
-    a20=Book.new :name=>"mynameis20", :price=>68, :title=>"mytitleis20", :author=> "myauthoris20"
-    a21=Novel.new :name=>"mynameis21", :price=>116, :title=>"mytitleis21", :author=> "myauthoris21", :summary=> "mysummaryis21"
-    a22=Novel.new :name=>"mynameis22", :price=>182, :title=>"mytitleis22", :author=> "myauthoris22", :summary=> "mysummaryis22"
-    a23=Novel.new :name=>"mynameis23", :price=>70, :title=>"mytitleis23", :author=> "myauthoris23", :summary=> "mysummaryis23"
-    a24=Novel.new :name=>"mynameis24", :price=>74, :title=>"mytitleis24", :author=> "myauthoris24", :summary=> "mysummaryis24"
-    a25=Dictionary.new :name=>"mynameis25", :price=>93, :title=>"mytitleis25", :author=> "myauthoris25", :lf=> "mylfis25", :lt=> "mylfts25"
-    a26=Dictionary.new :name=>"mynameis26", :price=>39, :title=>"mytitleis26", :author=> "myauthoris26", :lf=> "mylfis26", :lt=> "mylfts26"
-    a27=Dictionary.new :name=>"mynameis27", :price=>135, :title=>"mytitleis27", :author=> "myauthoris27", :lf=> "mylfis27", :lt=> "mylfts27"
-    a28=Dictionary.new :name=>"mynameis28", :price=>86, :title=>"mytitleis28", :author=> "myauthoris28", :lf=> "mylfis28", :lt=> "mylfts28"
-    a29=PocketDictionary.new :name=>"mynameis29", :price=>121, :title=>"mytitleis29", :author=> "myauthoris29", :lf=> "mylfis29", :lt=> "mylfts29"
-    a30=PocketDictionary.new :name=>"mynameis30", :price=>198, :title=>"mytitleis30", :author=> "myauthoris30", :lf=> "mylfis30", :lt=> "mylfts30"
-    a31=PocketDictionary.new :name=>"mynameis31", :price=>47, :title=>"mytitleis31", :author=> "myauthoris31", :lf=> "mylfis31", :lt=> "mylfts31"
-    a32=PocketDictionary.new :name=>"mynameis32", :price=>158, :title=>"mytitleis32", :author=> "myauthoris32", :lf=> "mylfis32", :lt=> "mylfts32"
-    a33=Video.new :name=>"mynameis29", :price=>161, :title=>"mytitleis29", :genre=> "mygenreis29"
-    a34=Video.new :name=>"mynameis30", :price=>197, :title=>"mytitleis30", :genre=> "mygenreis30"
-    a35=Video.new :name=>"mynameis31", :price=>75, :title=>"mytitleis31", :genre=> "mygenreis31"
-    a36=Video.new :name=>"mynameis32", :price=>131, :title=>"mytitleis32", :genre=> "mygenreis32"
-
-
-
-
+    
+    a1=Media.new :name=>"init", :price=>112
     a1.save
-    a2.save
-    a3.save
-    a4.save
-    a5.save
-    a6.save
-    a7.save
-    a8.save
-    a9.save
-    a10.save
-    a11.save
-    a12.save
-    a13.save
-    a14.save
-    a15.save
-    a16.save
-    a17.save
-    a18.save
-    a19.save
-    a20.save
-    a21.save
-    a22.save
-    a23.save
-    a24.save
-    a25.save
-    a26.save
-    a27.save
-    a28.save
-    a29.save
-    a30.save
-    a31.save
-    a32.save
-    a33.save
-    a34.save
-    a35.save
-    a36.save
+    cpt=Media.find(:last).id
+    cpt=cpt-1
+    a1.name="mynameis#{cpt+1}"
+    a1.price=112
+    a2=Media.new :name=>"mynameis#{cpt+2}", :price=>23
+    a3=Media.new :name=>"mynameis#{cpt+3}", :price=>54
+    a4=Media.new :name=>"mynameis#{cpt+4}", :price=>154
+    a5=Unknown.new :name=>"mynameis#{cpt+5}", :price=>29
+    a6=Unknown.new :name=>"mynameis#{cpt+6}", :price=>157
+    a7=Unknown.new :name=>"mynameis#{cpt+7}", :price=>62
+    a8=Unknown.new :name=>"mynameis#{cpt+8}", :price=>73
+    a9=Audio.new :name=>"mynameis#{cpt+9}", :price=>35, :title=>"mytitleis#{cpt+9}", :genre=> "mygenreis#{cpt+9}"
+    a10=Audio.new :name=>"mynameis#{cpt+10}", :price=>35, :title=>"mytitleis#{cpt+10}", :genre=> "mygenreis#{cpt+10}"
+    a11=Audio.new :name=>"mynameis#{cpt+11}", :price=>157, :title=>"mytitleis#{cpt+11}", :genre=> "mygenreis#{cpt+11}"
+    a12=Audio.new :name=>"mynameis#{cpt+12}", :price=>86, :title=>"mytitleis#{cpt+12}", :genre=> "mygenreis#{cpt+12}"
+    a13=Mp3.new :name=>"mynameis#{cpt+13}", :price=>17, :title=>"mytitleis#{cpt+13}", :genre=> "mygenreis#{cpt+13}"
+    a14=Mp3.new :name=>"mynameis#{cpt+14}", :price=>164, :title=>"mytitleis#{cpt+14}", :genre=> "mygenreis#{cpt+14}"
+    a15=Mp3.new :name=>"mynameis#{cpt+15}", :price=>88, :title=>"mytitleis#{cpt+15}", :genre=> "mygenreis#{cpt+15}"
+    a16=Mp3.new :name=>"mynameis#{cpt+16}", :price=>153, :title=>"mytitleis#{cpt+16}", :genre=> "mygenreis#{cpt+16}"
+    a17=Book.new :name=>"mynameis#{cpt+17}", :price=>115, :title=>"mytitleis#{cpt+17}", :author=> "myauthoris#{cpt+17}"
+    a18=Book.new :name=>"mynameis#{cpt+18}", :price=>57, :title=>"mytitleis#{cpt+18}", :author=> "myauthoris#{cpt+18}"
+    a19=Book.new :name=>"mynameis#{cpt+19}", :price=>57, :title=>"mytitleis#{cpt+19}", :author=> "myauthoris#{cpt+19}"
+    a20=Book.new :name=>"mynameis#{cpt+20}", :price=>107, :title=>"mytitleis#{cpt+20}", :author=> "myauthoris#{cpt+20}"
+    a21=Novel.new :name=>"mynameis#{cpt+21}", :price=>1, :title=>"mytitleis#{cpt+21}", :author=> "myauthoris#{cpt+21}", :summary=> "mysummaryis#{cpt+21}"
+    a22=Novel.new :name=>"mynameis#{cpt+22}", :price=>185, :title=>"mytitleis#{cpt+22}", :author=> "myauthoris#{cpt+22}", :summary=> "mysummaryis#{cpt+22}"
+    a23=Novel.new :name=>"mynameis#{cpt+23}", :price=>111, :title=>"mytitleis#{cpt+23}", :author=> "myauthoris#{cpt+23}", :summary=> "mysummaryis#{cpt+23}"
+    a24=Novel.new :name=>"mynameis#{cpt+24}", :price=>195, :title=>"mytitleis#{cpt+24}", :author=> "myauthoris#{cpt+24}", :summary=> "mysummaryis#{cpt+24}"
+    a25=Dictionary.new :name=>"mynameis#{cpt+25}", :price=>150, :title=>"mytitleis#{cpt+25}", :author=> "myauthoris#{cpt+25}", :lf=> "mylfis#{cpt+25}", :lt=> "mylfts#{cpt+25}"
+    a26=Dictionary.new :name=>"mynameis#{cpt+26}", :price=>100, :title=>"mytitleis#{cpt+26}", :author=> "myauthoris#{cpt+26}", :lf=> "mylfis#{cpt+26}", :lt=> "mylfts#{cpt+26}"
+    a27=Dictionary.new :name=>"mynameis#{cpt+27}", :price=>2, :title=>"mytitleis#{cpt+27}", :author=> "myauthoris#{cpt+27}", :lf=> "mylfis#{cpt+27}", :lt=> "mylfts#{cpt+27}"
+    a28=Dictionary.new :name=>"mynameis#{cpt+28}", :price=>114, :title=>"mytitleis#{cpt+28}", :author=> "myauthoris#{cpt+28}", :lf=> "mylfis#{cpt+28}", :lt=> "mylfts#{cpt+28}"
+    a29=PocketDictionary.new :name=>"mynameis#{cpt+29}", :price=>24, :title=>"mytitleis#{cpt+29}", :author=> "myauthoris#{cpt+29}", :lf=> "mylfis#{cpt+29}", :lt=> "mylfts#{cpt+29}"
+    a30=PocketDictionary.new :name=>"mynameis#{cpt+30}", :price=>174, :title=>"mytitleis#{cpt+30}", :author=> "myauthoris#{cpt+30}", :lf=> "mylfis#{cpt+30}", :lt=> "mylfts#{cpt+30}"
+    a31=PocketDictionary.new :name=>"mynameis#{cpt+31}", :price=>76, :title=>"mytitleis#{cpt+31}", :author=> "myauthoris#{cpt+31}", :lf=> "mylfis#{cpt+31}", :lt=> "mylfts#{cpt+31}"
+    a32=PocketDictionary.new :name=>"mynameis#{cpt+32}", :price=>98, :title=>"mytitleis#{cpt+32}", :author=> "myauthoris#{cpt+32}", :lf=> "mylfis#{cpt+32}", :lt=> "mylfts#{cpt+32}"
+    a33=Video.new :name=>"mynameis#{cpt+33}", :price=>90, :title=>"mytitleis#{cpt+33}", :genre=> "mygenreis#{cpt+33}"
+    a34=Video.new :name=>"mynameis#{cpt+34}", :price=>33, :title=>"mytitleis#{cpt+34}", :genre=> "mygenreis#{cpt+34}"
+    a35=Video.new :name=>"mynameis#{cpt+35}", :price=>159, :title=>"mytitleis#{cpt+35}", :genre=> "mygenreis#{cpt+35}"
+    a36=Video.new :name=>"mynameis#{cpt+36}", :price=>111, :title=>"mytitleis#{cpt+36}", :genre=> "mygenreis#{cpt+36}"
+    
+    tabA=[]
+    tabA<<a1
+    tabA<<a2
+    tabA<<a3
+    tabA<<a4
+    tabA<<a5
+    tabA<<a6
+    tabA<<a7
+    tabA<<a8
+    tabA<<a9
+    tabA<<a10
+    tabA<<a11
+    tabA<<a12
+    tabA<<a13
+    tabA<<a14
+    tabA<<a15
+    tabA<<a16
+    tabA<<a17
+    tabA<<a18
+    tabA<<a19
+    tabA<<a20
+    tabA<<a21
+    tabA<<a22
+    tabA<<a23
+    tabA<<a24
+    tabA<<a25
+    tabA<<a26
+    tabA<<a27
+    tabA<<a28
+    tabA<<a29
+    tabA<<a30 
+    tabA<<a31
+    tabA<<a32
+    tabA<<a33
+    tabA<<a34
+    tabA<<a35
+    tabA<<a36
 
+
+    tabA.each do |t|
+      t.save
+      (Comment.new :description=>"my first comment about #{t.class.name} with id #{t.id}", :media_id=>t.id).save
+      (Comment.new :description=>"my second comment about #{t.class.name} with id #{t.id}", :media_id=>t.id).save
+      if(t.class==Book ||t.class==Novel ||t.class==Dictionary ||t.class==PocketDictionary )
+        (BookComment.new :description=>"my first book comment about #{t.class.name} with id #{t.id}", :book_id=>t.id).save
+        (BookComment.new :description=>"my second book comment about #{t.class.name} with id #{t.id}", :book_id=>t.id).save        
+      end
+    end
+if(false)
     c1=Comment.new :description=>"my first comment about media with id 1", :media_id=>1
     c2=Comment.new :description=>"my first comment about media with id 2", :media_id=>2
     c3=Comment.new :description=>"my first comment about media with id 3", :media_id=>3
@@ -244,7 +266,7 @@ class Media < ActiveRecord::Base
     c70.save
     c71.save
     c72.save
-
+end
 
    end
 end

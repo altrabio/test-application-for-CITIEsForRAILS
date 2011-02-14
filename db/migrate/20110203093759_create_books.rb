@@ -1,18 +1,15 @@
 class CreateBooks < ActiveRecord::Migration
   def self.up
-    create_table :tablebooks do |t|
-      
+    create_table :books do |t|
       t.string :title
-      t.string :author
-
-     # t.timestamps TO DELETE
-    end
+      t.string :author      
+      end
     
-    CreateTheViewForCVI(Book)
+  CreateTheViewForCVI(Book) #needed for CITIEsForRails
   end
 
   def self.down
-    DropTheViewForCVI(Book)
+    DropTheViewForCVI(Book) #needed for CITIEsForRails
     drop_table :books
   end
 end

@@ -1,17 +1,14 @@
 class CreateDictionaries < ActiveRecord::Migration
   def self.up
-    create_table :dictionaries do |t|
-      
+    create_table :dictionaries do |t|      
       t.string :lf
       t.string :lt
-
-      #t.timestamps TO DELETE
     end
-  CreateTheViewForCVI(Dictionary)
+  CreateTheViewForCVI(Dictionary) #needed for CITIEsForRails
   end
 
   def self.down
-    DropTheViewForCVI(Dictionary)
+    DropTheViewForCVI(Dictionary) #needed for CITIEsForRails
     drop_table :dictionaries
   end
 end
