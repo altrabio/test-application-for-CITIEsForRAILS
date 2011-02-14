@@ -1,8 +1,15 @@
-rails generate scaffold Media name:string price:integer 
-rails generate scaffold Unknown
-rails generate scaffold Audio title:string genre:string
-rails generate scaffold Video title:string genre:string
-rails generate scaffold Book title:string author:string
-rails generate scaffold MP3
-rails generate scaffold Dictionary lf:string lt:string
-rails generate scaffold PocketDictionary
+This an example web app for demonstrating how to use CITIEsForRAILS gem. (see http://testaltrabio1.github.com/altrabioCVI/)
+
+This app is an implementation of a kind of Multimedia Library (either Media, Unknown, Audio, Mp3, Video, Book, Dictiponary, Pocket Dictionary, Novel go to http://testaltrabio1.github.com/altrabioCVI/ to learn more about medias and medias inheritance hierarchy). 
+
+
+You can populate the database either by :
+- adding manually some medias, just go to the desired media (Media, Unknown, Audio, Mp3, Video, Book, Dictiponary, Pocket Dictionary, Novel) list and follow the new Media link.
+- adding automatically some medias : just follow the populate database link (this will add some medias for each media class and will also add some comments for these medias)
+- adding manually some comments for medias : go to the comments list and follow the new commment link
+- adding manually some book comments for medias inheriting from book class (Book, Novel, Dictionary, PocketDictionary)  : go to the book comments list and follow the new book commment link
+
+We hope you won't need more explanations...
+
+We hope this demo app will be useful too...
+
