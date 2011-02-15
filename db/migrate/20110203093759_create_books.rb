@@ -5,11 +5,11 @@ class CreateBooks < ActiveRecord::Migration
       t.string :author      
       end
     
-  CreateTheViewForCVI(Book) #needed for CITIEsForRails
+  CreateTheViewForCITIEs(Book) #needed for CITIEsForRails
   end
 
   def self.down
-    DropTheViewForCVI(Book) #needed for CITIEsForRails
+    DropTheViewForCITIEs(Book) #needed for CITIEsForRails
     drop_table :books
   end
 end

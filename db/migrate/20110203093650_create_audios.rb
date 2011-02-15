@@ -4,11 +4,11 @@ class CreateAudios < ActiveRecord::Migration
       t.string :title
       t.string :genre
     end
-     CreateTheViewForCVI(Audio) #needed for CITIEsForRails
+     CreateTheViewForCITIEs(Audio) #needed for CITIEsForRails
   end
 
   def self.down
-    DropTheViewForCVI(Audio) #needed for CITIEsForRails
+    DropTheViewForCITIEs(Audio) #needed for CITIEsForRails
     drop_table :audios
   end
 end

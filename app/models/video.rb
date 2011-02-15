@@ -1,7 +1,7 @@
 
 class Video < Media
   
-  acts_as_cvi #needed for CITIEsForRails
+  acts_as_cities #needed for CITIEsForRails
 
   after_destroy :toto
   before_destroy :bef

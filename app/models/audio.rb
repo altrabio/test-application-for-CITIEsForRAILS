@@ -9,6 +9,6 @@ class Audio < Media
     puts("---->Before DESTROY CLASS audio")
   end
   
-  acts_as_cvi #needed for CITIEsForRails
+  acts_as_cities #needed for CITIEsForRails
   
 end

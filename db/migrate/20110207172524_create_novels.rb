@@ -4,11 +4,11 @@ class CreateNovels < ActiveRecord::Migration
       t.string :summary
       
     end
-  CreateTheViewForCVI(Novel) #needed for CITIEsForRails
+  CreateTheViewForCITIEs(Novel) #needed for CITIEsForRails
   end
 
   def self.down
-    DropTheViewForCVI(Novel) #needed for CITIEsForRails
+    DropTheViewForCITIEs(Novel) #needed for CITIEsForRails
     drop_table :novels
   end
 end

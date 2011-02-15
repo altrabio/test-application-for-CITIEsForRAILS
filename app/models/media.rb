@@ -4,7 +4,7 @@ class Media < ActiveRecord::Base
   before_destroy :bef4
   has_many :comments, :dependent => :destroy
  
-  acts_as_cvi #needed for CITIEsForRails
+  acts_as_cities #needed for CITIEsForRails
   
   def pricecategory
     if(price<75)

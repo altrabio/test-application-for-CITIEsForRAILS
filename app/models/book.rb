@@ -1,7 +1,7 @@
 
 
 class Book < Media
-  acts_as_cvi :table_name=>'books'  #needed for CITIEsForRails
+  acts_as_cities :table_name=>'books'  #needed for CITIEsForRails
   
   has_many :book_comments, :dependent => :destroy
   after_destroy :toto2

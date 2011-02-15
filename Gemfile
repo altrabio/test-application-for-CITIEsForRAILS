@@ -6,7 +6,8 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
-
+gem 'pg'
+gem 'mysql2'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -30,6 +31,5 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 #   gem 'webrat'
 # end
 
-gem 'activerecord'
-gem 'pg'
-gem 'altrabioCVI'
+#gem 'activerecord'
+gem 'CITIEsForRAILS'

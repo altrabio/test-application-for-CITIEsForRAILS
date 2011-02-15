@@ -11,6 +11,6 @@ class Dictionary < Book
     puts("---->Before DESTROY CLASS dico")
   end
 
- acts_as_cvi #needed for CITIEsForRails
+ acts_as_cities #needed for CITIEsForRails
 
 end

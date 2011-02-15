@@ -4,11 +4,11 @@ class CreateVideos < ActiveRecord::Migration
       t.string :title
       t.string :genre
     end   
-    CreateTheViewForCVI(Video) #needed for CITIEsForRails
+    CreateTheViewForCITIEs(Video) #needed for CITIEsForRails
   end
 
   def self.down
-    DropTheViewForCVI(Video) #needed for CITIEsForRails
+    DropTheViewForCITIEs(Video) #needed for CITIEsForRails
     drop_table :videos
   end
 end

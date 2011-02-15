@@ -4,11 +4,11 @@ class CreateDictionaries < ActiveRecord::Migration
       t.string :lf
       t.string :lt
     end
-  CreateTheViewForCVI(Dictionary) #needed for CITIEsForRails
+  CreateTheViewForCITIEs(Dictionary) #needed for CITIEsForRails
   end
 
   def self.down
-    DropTheViewForCVI(Dictionary) #needed for CITIEsForRails
+    DropTheViewForCITIEs(Dictionary) #needed for CITIEsForRails
     drop_table :dictionaries
   end
 end

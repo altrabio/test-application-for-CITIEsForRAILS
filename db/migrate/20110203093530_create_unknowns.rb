@@ -1,4 +1,5 @@
 class CreateUnknowns < ActiveRecord::Migration
+
   def self.up
    
   end
