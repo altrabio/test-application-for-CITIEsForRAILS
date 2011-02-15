@@ -1,7 +1,6 @@
-This an example web app for demonstrating how to use CITIEsForRAILS gem. (see https://github.com/altrabio/CITIEsForRAILS   AND http://altrabio.github.com/CITIEsForRAILS/   )
+This an example web app for demonstrating how to use CITIEsForRAILS gem. (see http://testaltrabio1.github.com/altrabioCVI/)
 
-This app is an implementation of a kind of Multimedia Library (either Media, Unknown, Audio, Mp3, Video, Book, Dictiponary, Pocket Dictionary, Novel go to  https://github.com/alt\
-rabio/CITIEsForRAILS   AND http://altrabio.github.com/CITIEsForRAILS/ to learn more about medias and medias inheritance hierarchy). 
+This app is an implementation of a kind of Multimedia Library (either Media, Unknown, Audio, Mp3, Video, Book, Dictiponary, Pocket Dictionary, Novel go to http://testaltrabio1.github.com/altrabioCVI/ to learn more about medias and medias inheritance hierarchy). 
 
 
 You can populate the database either by :
