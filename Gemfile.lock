@@ -1,7 +1,6 @@
 GEM
   remote: http://rubygems.org/
-  specs:
-    CITIEsForRAILS (0.0.1)
+  specs:    
     abstract (1.0.0)
     actionmailer (3.0.3)
       actionpack (= 3.0.3)
